@@ -1,0 +1,30 @@
+
+#circulo{
+	background-color: red;
+	width:30px;
+	height: 30px;
+	border-radius: 50%;
+}
+
+#cuadrado{
+	background-color: #909FCE;
+	width: 90%;
+	height: 80%;
+	position:relative;
+	left:2.5%;
+	top: 5%;
+	border-style: solid;
+	border-color: #424F97;
+	border-width: 5px;
+}
+
+.terceraparte{
+	width: 30%;
+	height: 50%;
+	background-color: gray;	
+}
+
+.inline-block{
+	display: inline-block;
+	position: fixed;
+}
