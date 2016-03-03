@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JQuery User Interface
+        </title>
+        
+        <meta charset="utf-8">
+        
+        <!--    JQuery    -->
+        <script src="js/jquery-2.2.1.js"></script>
+        <script src="js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+        
+        <!--    myJS's    -->
+        <script src="js/functions.js"></script>
+        
+        <!--    CSS    -->
+        <link rel="stylesheet" type="text/css" href="css/styles.css" charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.4.custom/jquery-ui.theme.css">
+        
+        <!--    Fonts    -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,900,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Cabin+Condensed:400,500,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        
+        <script>
+            
+        </script>
+        
+    </head>
+    <body>
+        <header>
+            <div class="logotipo">
+                <img id="logo" src="images/JQuery_logo.png" width="30%">
+                <h1>Sintaxis & selectors</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Principal</a></li>
+                    <li><a href="sintax_selectors.html">Sintaxis & Selectors</a></li>
+                    <li><a href="Eventos/index.html">Eventos</a></li>
+                    <li><a href="effects.html">Effects</a></li>
+                    <li><a href="widgets.html">Widgets</a></li>
+                    <li><a class="practica" href="practice.html">Práctica</a></li>
+                    <li><a class="practica" href="credits.html">Creditos</a></li>
+                </ul>
+            </nav>
+         </header>
+        <section class="main">
+            <section class="articles">
+                <article>
+                    <h2>Sintaxis Básica</h2>
+                    
+                      La sintaxis de JQuery fue hecha a la medida para seleccionar elementos HTML y declararles alguna acción:
+                      <br>
+                      <br>
+                      <strong><i>$(selector).action( )</i></strong>
+                      <br>
+                      <br>
+                      <ul>
+                        <li>El signo <i>"$"</i> define o da acceso a un JQuery</li>
+                        <li>Un <strong><i>(selector)</i></strong> , consulta o encuentra un elemento HTML</li>
+                        <li>Una acción de JQuery es implementada a los elementos <i>action()</i></li>
+                      </ul>
+                   
+                    <br>
+                        Examples:
+                        <br>
+                        <br>
+                        <pre>
+    $(this).hide() - Oculta el elemento actual.
+
+    $("p").hide() - Oculta todos los elementos tipo "p".
+    
+    $(".test").hide() - Oculta todos los elementos con la clase "p".
+    
+    $("#test").hide() - Oculta los elementos con el id="test".
+                        </pre>
+                </article>
+                <article id="porque">
+                    <h2>The Docuement Ready Event</h2>
+                    <br>
+                      <pre>
+    $(document).ready(function(){
+  
+      // jQuery methods go here...
+  
+    });
+                      </pre>
+                    <p>
+                        El evento ready previene cualquier consulta al código de JQuery antes de que el documento termine de cargar. <br>
+                        Es una buena Práctica esperar a que el documento esté completamente cargado antes de empezar a trabajar con él. Esto también permite que tengas código JavaScript antes del cuerpo del documento, en la "head section".
+                    </p>
+                    <br>
+                    <p>
+                        El equipo de JQuery creó un metodo mas corto para llamar al <i>Document Ready Event</i> :
+                    </p>
+                    <br>
+                      <pre>
+   $(function(){
+
+    // jQuery methods go here...
+
+  });
+                      </pre>
+                </article>
+                
+                <article id="antes">
+                    <h2>Selectores</h2>
+                    <br>
+                    
+                      Los selectores de JQuery te permiten seleccionar y manipular elementos HTML.
+                      <br>
+                      <br>
+                      Son usados para encontrar (o seleccionar) elementos HTML basados en sus id, clases, tipos, atributos, valores y mucho más. Es basado en los selectores de CSS e incluso JQuery agrega unos mas.
+                      <br>
+                      <br>
+                      Todos los selectores en JQuery inician con el signo de Dolar y paréntesis :
+                      <p>
+                        
+                        <br><br>
+                        <strong><i>$()</i></strong>.
+                      </p>
+                    
+                </article>
+                <article id="install">
+                    <table padding=center border=10px;>
+                      <thead>
+                      <tr>
+                        <th>Sintaxis</th>
+                        <th>Descripción</th>
+                      </tr>
+                      </thead>
+                      <tr>
+                        <th>$("*")</th>
+                        <th>Selecciona todos los elementos</th>
+                      </tr>
+                      <tr>
+                        <th>$(this)</th>
+                        <th>Selecciona el elemento HTML actual</th>
+                      </tr>
+                      <tr>
+                        <th>$("p.intro")</th>
+                        <th>Selecciona todos los elementos tipo "p" con la clase ".intro"</th>
+                      </tr>
+                      <tr>
+                        <th>$("p:first")</th>
+                        <th>Selecciona el primer elemento de tipo "p"</th>
+                      </tr>
+                      <tr>
+                        <th>$("ul li:first")</th>
+                        <th>Selecciona el primer li del primer ul</th>
+                      </tr>
+                      <tr>
+                        <th>$("[href]")	</th>
+                        <th>Selecciona todos los elementos con un atributo "href"</th>
+                      </tr>
+                    </table>
+                </article>
+            </section>
+            <aside id="my_aside">
+                <h3>Índice:</h3>
+                <ul id="lista">
+                    <li><a href="#">Sintaxis Básica</a></li>
+                    <li><a href="#porque">Document Ready Event</a></li>
+                    <li><a href="#antes">Selectores</a></li>
+                    <li><a href="#install">Lista de Selectores</a></li>
+                </ul>
+            </aside>
+        </section>
+        <footer>
+            
+        </footer>
+    </body>
+</html>

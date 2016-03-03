@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JQuery User Interface
+        </title>
+        
+        <meta charset="utf-8">
+        
+        <!--    JQuery    -->
+        <script src="js/jquery-2.2.1.js"></script>
+        <script src="js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+        
+        <!--    myJS's    -->
+        <script src="js/functions.js"></script>
+        
+        <!--    CSS    -->
+        <link rel="stylesheet" type="text/css" href="css/effectsCss.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css" charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.4.custom/jquery-ui.theme.css">
+        <link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.4.custom/jquery-ui.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        
+        <!--    Fonts    -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,900,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Cabin+Condensed:400,500,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        
+    </head>
+    <body>
+        <header>
+            <div class="logotipo">
+                <img id="logo" src="images/JQuery_logo.png" width="30%">
+                <h1>Effects</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Principal</a></li>
+                    <li><a href="sintax_selectors.html">Sintaxis & Selectors</a></li>
+                    <li><a href="Eventos/index.html">Eventos</a></li>
+                    <li><a href="effects.html">Effects</a></li>
+                    <li><a href="widgets.html">Widgets</a></li>
+                    <li><a class="practica" href="practice.html">Práctica</a></li>
+                    <li><a class="practica" href="credits.html">Creditos</a></li>
+                </ul>
+            </nav>
+         </header>
+        <section class="main">
+            <section class="articles">
+            <!--Hide-Show-->
+                <article id="hide&show">
+                    <h2>jQuery hide() and show()</h2><br>
+                    <h3>Los efectos hide y show nos sirven para ocultar o mostrar elementos HTML</h3>
+                    <br>
+                    <div style="font-size: 18px" >
+                    <br><pre><b>
+        Como implementarlos:</b><br>
+            $("#hide").click(function(){
+                $("p").hide();
+            });
+
+            $("#show").click(function(){
+                $("p").show();
+            });
+            
+                    </pre>
+                    <h3>Otras maneras</h3>
+                    <pre><b>
+        Como implementarlos:</b><br>
+            $("#hide").click(function(){
+                $("p").hide(1000); "En ms"
+            });
+
+            $("#show").click(function(){
+                $("p").show("slow");
+            });
+            
+                    </pre>   
+                    </div>
+                    Ejemplo:
+                    <iframe style="border:3px solid rgb(7, 105, 173)" src="http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_hide_show" width="100%" height="400"></iframe>
+                </article>
+                <!--Fading-->
+                <article >
+                    
+                    <h2>Efectos Fading (Aparecer y Desaparecer)</h2>
+                    <br>
+                    <h3>Ejemplos con fadeIn(), fadeOut(), fadeToggle(), fadeTo()</h3>
+                    
+                    <div style="font-size: 18px">
+                    <pre>
+                    <br><b>
+        Como implementarlos:</b><br>
+            $("button").click(function(){
+                $("#div1").fadeIn();
+                $("#div2").fadeOut("slow");
+                $("#div3").fadeToggle(3000);
+                $("#div4").fadeTo("slow", 0.7);
+            });
+                    </pre>
+                    </div>
+                    Ejemplo:
+                    <iframe style="border:3px solid rgb(7, 105, 173)" src="http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_fadein" width="100%" height="400"></iframe>
+                </article>
+                <!--Slide-->
+                <article >
+                    
+                    <h2>jQuery Sliding (Corredizo)</h2>
+                    <h3>Ejemplos con slideDown(), slideUp(), slideToggle()</h3>
+                    
+                    <div style="font-size: 18px">
+                    <pre>
+                    <br><b>
+        Como implementarlos:</b><br>
+            $("#flip").click(function(){
+                $("#panel").slideDown();
+                $("#panel").slideUp();
+                $("#panel").slideToggle();
+            });
+                    </pre>
+                    </div>
+                    Ejemplo:
+                     <iframe style="border:3px solid rgb(7, 105, 173)" src="http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_slide_down" width="100%" height="400"></iframe>
+                    
+                </article>
+                <!--ANIMATE-->
+                <article >
+                    
+                    <h2>jQuery Animations (Animaciones)</h2>
+                    <h3>Ejemplos con animate()</h3>
+                    
+                    <div style="font-size: 18px">
+                    <pre>
+                    <br><b>
+        Como implementarlos:</b><br>
+            $("button").click(function(){
+                $("div").animate({
+                    left: '250px',
+                    height: '150px',
+                    width: '150px'
+                });
+            }); 
+                    </pre>
+                    <h3>Otras maneras</h3>
+                    <pre><b>
+        Como implementarlos:</b><br>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $("div").animate({
+                        height: 'toggle'
+                    });
+                });
+            });
+                    </pre>
+                    </div>
+                    Ejemplo:
+                    <iframe style="border:3px solid rgb(7, 105, 173)" src="http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_animation1_multicss" width="100%" height="400"></iframe>
+                </article>
+                
+                <!--Stop Animate-->
+                <article >
+                    
+                    <h2>jQuery Stop Animations (Animaciones)</h2>
+                    <h3>Ejemplos con stop()</h3>
+                    
+                    <div style="font-size: 18px">
+                    <pre>
+                    <br><b>
+        Como implementarlos:</b><br>
+            $("#stop").click(function(){
+                $("#panel").stop();
+            });
+                    </pre>
+                    </div>
+                    Ejemplo:
+                    <iframe style="border:3px solid rgb(7, 105, 173)" src="http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_stop_slide" width="100%" height="400"></iframe>
+                </article>
+
+                <!--CallBack-->
+                <article >
+                    
+                    <h2>jQuery Callback Functions (Llamar de vuelta)</h2>
+                    <h3>Ejemplos con llamadas a funciones.</h3>
+                    
+                    <div style="font-size: 18px">
+                    <pre>
+                    <b>
+        Como implementarlos:</b>
+            $("button").click(function(){
+                $("p").hide("slow", function(){
+                    alert("The paragraph is now hidden");
+                });
+            });
+                    </pre>
+                    <h3>Otras maneras</h3>
+                    <pre><b>
+        Como implementarlos:</b><br>
+
+            $("p").show("slow", function(){ "algo" });
+            $("p").toggle("slow", function(){ "algo" });
+            $("p").toggle(1000, function(){ "algo" });
+                    </pre>
+                    </div>
+
+                    Ejemplo:
+                    <iframe style="border:3px solid rgb(7, 105, 173)" src="http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_hide_callback" width="100%" height="400"></iframe>
+                </article>
+                
+                <!--Chainig-->
+                <article >
+                    
+                    <h2>jQuery Method Chaining (Encadenamiento)</h2>
+                    <h3>Ejemplos con declaraciones multiples en el mismo elemento.</h3>
+                    
+                    <div style="font-size: 18px">
+                    <pre>
+                    <br><b>
+        Como implementarlos:</b><br>
+            $("button").click(function(){
+                $("#p1").css("color", "red")
+                            .slideUp(2000)
+                            .slideDown(2000);
+            });
+                    </pre>
+                    </div>
+
+                    Ejemplo:
+                    <iframe style="border:3px solid rgb(7, 105, 173)" src="http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_chaining" width="100%" height="400"></iframe>
+                </article>
+                
+            </section>
+            
+            <!-- Menu de la página -->
+            <aside id="my_aside">
+                
+                <h3>Índice:</h3>
+                
+                <ul id="lista">
+                    <li><a href="#hide&show">Hide & Show</a></li>
+                    <li><a href="#fading">Fading</a></li>
+                    <li><a href="#slide">Slide</a></li>
+                    <li><a href="#stopAnimation">Stop Animation</a></li>
+                </ul>
+                
+            </aside>
+            
+            
+        <footer>
+            
+        </footer>
+    </body>
+</html>

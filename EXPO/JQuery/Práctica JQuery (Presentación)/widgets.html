@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JQuery User Interface
+        </title>
+        
+        <meta charset="utf-8">
+        
+        
+        <!--    JQuery    -->
+        <script src="js/jquery-2.2.1.js"></script>
+        <script src="js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+        
+        
+        <!--    myJS's    -->
+        <script src="js/functions.js"></script>
+        
+        
+        <!--    CSS    -->
+        <link rel="stylesheet" type="text/css" href="css/styles.css" charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.4.custom/jquery-ui.theme.css">
+        <link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.4.custom/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.4.custom/jquery-ui.theme.css">
+        
+        <!--    CSS    -->
+        <link rel="stylesheet" type="text/css" href="js/new/jquery-ui-1.11.4.custom/jquery-ui.min.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/practice.css">
+
+
+        <!--     JQuery    -->
+        <script type="text/javascript" src="js/new/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+        <script type="text/javascript" src="js/new/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+
+
+        <!--     JavaScript    -->
+        <script type="text/javascript" src="js/ui.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
+        
+        
+        <!--    Fonts    -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,900,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Cabin+Condensed:400,500,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        
+    </head>
+    <body>
+        <header>
+            <div class="logotipo">
+                <img id="logo" src="images/JQuery_logo.png" width="30%">
+                <h1>Effects & Widgets</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Principal</a></li>
+                    <li><a href="sintax_selectors.html">Sintaxis & Selectors</a></li>
+                    <li><a href="Eventos/mystyle.css">Eventos</a></li>
+                    <li><a href="effects.html">Effects</a></li>
+                    <li><a href="widgets.html">Widgets</a></li>
+                    <li><a class="practica" href="practice.html">Práctica</a></li>
+                    <li><a class="practica" href="credits.html">Creditos</a></li>
+                </ul>
+            </nav>
+         </header>
+        <section class="main">
+            <section class="articles">
+                
+                
+                <article id="figuras" class="figures-draggable">
+                
+                    <h2>Draggable (Figuras)</h2>
+                    <h3>Ejemplo con divs & containment "Parent"</h3>
+                    
+                    <div id="draggable1" class="circle"></div>
+                    <div id="draggable2" class="square"></div>
+                    <div id="draggable3" class="triangle"></div>
+                    
+                    <br>
+                    <h2>Code:</h2>
+                    <h3>$( "#draggable1, #draggable2, #draggable3" ).draggable({ containment: "parent" });</h3>
+                    
+                </article>
+                
+                
+                <article id="cursors_positions" class="cursors-draggable">
+                
+                    <h2>Draggable (Cursors and Position cursors)</h2>
+                    <h3>Ejemplo con divs, cursors & containment parent</h3>
+                    
+                    <div id="d1" class="simple-div">
+                        <p>El cursor siempre estará relativamente al centro del div.</p>
+                    </div>
+                    <div id="d2" class="simple-div">
+                        <p>El cursor es crosshair y se encontrará a -5px, -5px del div.</p>
+                    </div>
+                    <div id="d3" class="simple-div">
+                        <p>El cursor estará en la posición "x" del cursor y "y" bottom del div.</p>
+                    </div>
+                    
+                    <p>
+                        $( "selector" ).draggable({ cursor: "tipo de cursor", cursorAt: { top: position, left: position... } });
+                        <br>
+                        $( "selector" ).draggable({ cursor: "tipo de cursor", cursorAt: { top: -5, left: -5 } });
+                        <br>
+                        $( "selector" ).draggable({ cursorAt: { bottom: 0 } });
+                    </p>
+                    
+                </article>
+                
+                
+                <article class="div-header-draggable">
+                    
+                    <h2>Draggable (Solo en posiciones específicas)</h2>
+                    <h3>Ejemplo con divs, cursors & containment parent</h3>
+                    
+                    <div id="draggable_header" class="simple-div-header">
+                        <div id="div-header-bar" class="div-header-bar">
+                            <p>Puedes moverme :D</p>
+                        </div>
+                        <p>Puedes moverme unicamente con la barra de la cabecera del div.</p>
+                    </div>
+                    
+                    <p>
+                        $( "#div u objeto" ).draggable({ handle: "#div u objeto", containment: "parent" });
+                        <br>
+                        $( "div u objeto" ).disableSelection(); - Se deshabilita la selección
+                    </p>
+                    
+                </article>
+                
+                
+                <article class="div-header-draggable">
+                    
+                    <h2>Selectable</h2>
+                    <h3>Ejemplo con listas</h3>
+                    
+                    <ol id="selectable">
+                        
+                        <li class="ui-widget-content">Item 1</li>
+                        <li class="ui-widget-content">Item 2</li>
+                        <li class="ui-widget-content">Item 3</li>
+                        <li class="ui-widget-content">Item 4</li>
+                        <li class="ui-widget-content">Item 5</li>
+                        <li class="ui-widget-content">Item 6</li>
+                        <li class="ui-widget-content">Item 7</li>
+                        
+                    </ol>
+                    <p>
+                        $( "#selectable" ).selectable();
+                    </p>
+                    
+                    <p>
+                        class="ui-widget-content"
+                    </p>
+                    
+                </article>
+                
+                <article class="figures-draggable">
+                    
+                    <h2>Resizable</h2>
+                    
+                    <div id="resizable" class="box1">
+                        <p>Cambiame el tamaño</p>
+                    </div>
+                    
+                </article>
+                
+                <article class="figures-draggable">
+                    <br>
+                    <h2>Datepicker</h2>
+                    <br><br>
+                    <p>Elegir fecha:</p>
+                    <p><input id="datepicker" type="text"></p>
+                    
+                </article>
+                
+                <article class="figures-draggable">
+                    <br>
+                    <h2>Hover</h2>
+                    
+                </article>
+                
+                
+            </section>
+            
+            <!-- Menu de la página -->
+            <aside id="my_aside">
+                
+                <h3>Índice:</h3>
+                
+                <ul id="lista">
+                    <li><a href="#figuras">Draggable (Figuras)</a></li>
+                    <li><a href="#cursors_positions">Draggable (Cursors and Position cursors)</a></li>
+                    <li><a href="#antes">Antes de empezar</a></li>
+                    <li><a href="#install">Instalacion</a></li>
+                </ul>
+                
+            </aside>
+            
+            
+        <footer>
+            
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+body{
+	background-color: #0066CC;
+}
+
+header{
+    -webkit-box-shadow: 0px 4px 14px 10px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 4px 14px 10px rgba(0,0,0,0.75);
+	box-shadow: 0px 1px 33px 5px rgba(0,0,0,1);
+    background-color: white;
+    border-bottom-left-radius:.9em;
+    border-bottom-right-radius: .9em;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-color: black;
+    border-bottom-width: .5em;
+    border-left-width: .5em;
+    border-right-width: .5em;
+    height: 10%;
+    left: 20%;
+    right: 20%;
+    position: absolute;
+    top: -1%;
+    width: 60%;
+}
+
+#Container{
+    position: absolute;
+    top: 25%;
+    width: 95%;
+}
+.titulo{
+    color: white;
+   text-align: center;
+}
+.texto,#codigo1,#codigo2,#codigo3,#codigo4,#codigo5{
+    padding: 5%;
+}
+.cuerpo{
+    background-color: white;
+    border-bottom-left-radius:.9em;
+    border-bottom-right-radius: .9em;
+    width: auto;
+    height: 20%;
+}
+
+#eve1,#eve2,#eve3,#eve4,#eve5{
+    -webkit-box-shadow: 0px 4px 14px 10px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 4px 14px 10px rgba(0,0,0,0.75);
+	box-shadow: 0px 1px 33px 5px rgba(0,0,0,1);
+    background-color:black;
+    border-top-left-radius:.9em;
+    border-top-right-radius: .9em;
+    border-bottom-left-radius:.9em;
+    border-bottom-right-radius: .9em;
+    display: inline-block;
+    margin-bottom: 3%;
+    margin-left: 5%;
+    padding-top: 1px;
+    width: 40%;
+}
+#eve5{
+    margin-left: 30%;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html leng="es">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="mystyle.css" media="screen">
+        
+    <script src="js/jquery-1.12.0.min.js"></script>
+	<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+        <title>Ejemplos</title>
+        <script type="text/javascript" src="js/eventos.js"></script>
+    </head>
+    <body>
+        <header>
+            <center><h1>Eventos</h1></center>
+        </header>
+        <div id="Container">
+            <div id="eve1">
+                <p class="titulo">click</p>
+                <section class="cuerpo">
+                    <p class="texto">La función  click() se ejecuta cuando el usuario hace click en el elemento HTML.</p>
+                    <p id="codigo1">
+                        $("p").click(function(){<br><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;$(this).hide();<br><br>
+                                    });
+                    </p>
+                </section>
+            </div>
+            <div id="eve2">
+                <p class="titulo">dblclick</p>
+                <section class="cuerpo">
+                    <p class="texto">El método dblclick() se ejecuta cuando el usuario hace doble clic en el elemento HTML.</p>
+                    <p id="codigo2">
+                        $("p").dbclick(function(){<br><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;$(this).hide();<br><br>
+                                    });
+                    </p>
+                </section>
+            </div>
+            <div id="eve3">
+                <p class="titulo">mouseenter</p>
+                <section class="cuerpo">
+                    <p class="texto">El método MouseEnter() se ejecuta cuando el puntero del ratón entra en el elemento HTML</p>
+                    <p id="codigo3">
+                        $("p").mouseenter(function(){<br><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;$(this).hide();<br><br>
+                        });
+                    </p>
+                </section>
+            </div>
+            <div id="eve4">
+                <p class="titulo">mouseleave</p>
+                <section class="cuerpo">
+                    <p class="texto">El método MouseLeave() se ejecuta cuando el puntero del ratón sale del elemento HTML.</p>
+                    <p id="codigo4">
+                        $("p").mouseleave(function(){<br><br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;$(this).hide();<br><br>
+                        });
+                    </p>
+                </section>
+            </div>
+            <div id="eve5">
+                <p class="titulo">Hover</p>
+                <section class="cuerpo">
+                    <p class="texto">El evento hover() se ejecuta cuando el ratón entra en el elemento HTML, y la segunda función cuando el ratón sale del elemento HTML.</p><br>
+                    <p id="codigo5">
+                        $("p").hover(function(){<br><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;alert("You entered p1!");<br>
+                            },<br>
+                            function(){<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;alert("Bye! You now leave p1!");<br>
+                            });
+                    </p>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>
